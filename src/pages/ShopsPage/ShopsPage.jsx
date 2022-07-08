@@ -1,6 +1,11 @@
-function ShopsPage(){
+import {Box} from './ShopsPage.styled'
+
+function ShopsPage() {
     return (
-        <h1>Shops</h1>
+        <Box>
+            <h1>Shops</h1>
+        </Box>
+        
     )
 };
 

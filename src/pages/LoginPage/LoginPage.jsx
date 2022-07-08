@@ -7,8 +7,6 @@ const LoginPage = () => {
         <LoginForm />;
     </Box>
     )
-    
-    
 };
 
 export default LoginPage;

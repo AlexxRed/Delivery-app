@@ -10,6 +10,7 @@ import ShopsPage from "../../pages/ShopsPage/ShopsPage";
 import ShoppingCartPage from "../../pages/ShoppingCartPage/ShoppingCartPage";
 import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 infoStyle();
 
 
@@ -24,7 +25,7 @@ function App() {
           <Route
             path={refs.registerPage}
             element={
-              
+
               <RegisterPage />
             
             }
@@ -37,6 +38,7 @@ function App() {
 
               }
           />
+          <Route path={refs.notFoundPage} element={<NotFoundPage/>}/> 
         </Route>
       </Routes>
     </>

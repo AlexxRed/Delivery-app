@@ -1,7 +1,10 @@
+import { Box } from './HomePage.styled'
+
 function HomePage() {
     // const isLogin = useSelector(authSelectors.getIsLoggedIn);
+    // const isLogin = true;
     return (
-        <>
+        <Box>
             {/* {isLogin ? <UserLoggedInTitle>Welcome, you are logged in with your account.
                 Thank you for using our application.
                 <Link to={refs.contactsPage}>Here are your contacts</Link>
@@ -15,7 +18,7 @@ function HomePage() {
             </>
             } */}
             <h1>Home page</h1>
-        </>
+        </Box>
     )
 };
 
