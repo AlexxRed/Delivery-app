@@ -24,6 +24,6 @@ export function infoStyle() {
     cssAnimationStyle: 'zoom',
     cssAnimationDuration: '500',
     useIcon: 'false',
-    messageColor: '#ff6b01',
+    messageColor: '#99ff01',
 });
 };

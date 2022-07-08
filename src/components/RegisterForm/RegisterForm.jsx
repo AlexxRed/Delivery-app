@@ -1,5 +1,9 @@
-import { useState } from 'react';
-import { LableForm, Box, Form, FormTitle, InputForm, FormButton } from "./RegisterForm.styled";
+// import { useState } from 'react';
+import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } from "./RegisterForm.styled";
+import { Formik, ErrorMessage } from 'formik';
+import validationSchemaRegister from '../../services/validationSchemaRegister';
+import { Link } from "react-router-dom";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import { useDispatch } from 'react-redux';
 // import  operations  from '../../redux/auth/authOperations';
 
@@ -7,71 +11,73 @@ import { LableForm, Box, Form, FormTitle, InputForm, FormButton } from "./Regist
 
 export default function RegisterPage() {
     // const dispatch = useDispatch();
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
 
-    const handleChange = ({ target: { name, value } }) => {
-        switch (name) {
-        case 'name':
-            return setName(value);
-        case 'email':
-            return setEmail(value);
-        case 'password':
-            return setPassword(value);
-        default:
-            return;
-        }
+    const initialValues = {
+        name: '',
+        email: '',
+        password: '',
     };
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        const user = { name, email, password };
-        // dispatch(operations.register(user));
-        console.log(user);
-        setName('');
-        setEmail('');
-        setPassword('');
+
+    const handleSubmit = (values, { resetForm }) => {
+        console.log(values);
+        resetForm();
     };
+
+    const renderError = message => Notify.info(`${message}`);
 
     return (
         <Box>
-        <FormTitle>Please register to use the Delivery service</FormTitle>
+            <FormTitle>Please register to use the Delivery service</FormTitle>
+            
+            <Formik
+                initialValues={initialValues}
+                onSubmit={handleSubmit}
+                validationSchema={validationSchemaRegister}
+            >
+                <RegisterForm autoComplete="on">
+                    <LableForm htmlFor="name">
+                    Name
+                        <InputForm type="text"
+                            name="name"
+                            placeholder="Your name"
+                        />
+                    </LableForm>
+                    <ErrorMessage name="name" render={renderError} />
 
-        <Form onSubmit={handleSubmit}  autoComplete="on">
-            <LableForm >
-            Name
-            <InputForm type="text"
-                name="name"
-                value={name}
-                placeholder="Your name"
-                onChange={handleChange} />
-            </LableForm>
+                    <LableForm htmlFor="email">
+                    Email
+                        <InputForm
+                            type="email"
+                            name="email"
+                            placeholder="Your email"        
+                        />
+                    </LableForm>
+                    <ErrorMessage name="email" render={renderError} />
 
-            <LableForm >
-            Email
-            <InputForm
-                type="email"
-                name="email"
-                placeholder="Your email"        
-                value={email}
-                onChange={handleChange}
-            />
-            </LableForm>
+                    <LableForm htmlFor="password">
+                    Password
+                        <InputForm
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                        />
+                    </LableForm>
+                    <ErrorMessage name="password" render={renderError} />
 
-            <LableForm >
-            Password
-            <InputForm
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={password}
-                onChange={handleChange}
-            />
-            </LableForm>
-
-            <FormButton type="submit">Registration</FormButton>
-        </Form>
+                    <FormButton type="submit">Register</FormButton>
+                </RegisterForm>
+            </Formik>
+        
+            <Text>Already have account?</Text>
+            <Text>
+                <Link to="/login"
+                    style={{ textDecoration: "none", fontSize: 18, color: "#b027da" }}>Login
+                </Link>
+            </Text>
         </Box>
     );
-}
+};

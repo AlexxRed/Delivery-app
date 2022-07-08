@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-
+import { Form, Field  } from 'formik';
 
 export const Box = styled.div`
     position: absolute;
@@ -32,7 +32,7 @@ export const FormTitle = styled.h3`
     margin-top: auto;
 `;
 
-export const Form = styled.form`
+export const LogForm = styled(Form)`
     display: block;
     width: 320px;
 `;
@@ -45,7 +45,7 @@ export const LableForm = styled.label`
     margin-bottom: 12px,
 `;
 
-export const InputForm = styled.input`
+export const InputForm = styled(Field)`
     display: flex;
     border: 0px;
     box-sizing: content-box;
