@@ -12,7 +12,7 @@ export const Logo = styled(DinnerDiningIcon)`
     fill: #0e4e05;
     &:hover,
     &:focus {
-            fill: #076e2f;
+            fill: #d637b4d5;
         }
 `;
 
@@ -22,16 +22,15 @@ export const Link = styled(NavLink)`
     text-decoration: none;
     padding: 12px;
     font-weight: 500;
-    color: #2a363b;
+    color: #0a415a;
     font-size: 18px;
     &:hover,
     &:focus {
             color: #da4e44;
             font-size: 20px;
-            font-weight: 900;
         }
     &.active {
-        color: #a82993;
+        color: #d637b4d5;
     }
 `;
 
@@ -42,7 +41,7 @@ export const Header = styled.header`
     min-height: 80px;
     margin-bottom: 0px;
     background-color: #33a02ff0;
-    border-bottom: 1px solid #2a363b;
+    border-bottom: 1px solid #0a415a;
 `;
 export const Navigation = styled.nav`
     display: flex;

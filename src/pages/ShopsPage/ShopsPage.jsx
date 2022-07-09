@@ -1,9 +1,11 @@
 import { Box } from './ShopsPage.styled';
+import ShopsList from '../../components/ShopsList/ShopsList';
 
 function ShopsPage() {
     return (
         <Box>
-            <h1>Shops</h1>
+            <ShopsList/>
+            
         </Box>
         
     )

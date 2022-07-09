@@ -3,7 +3,7 @@ import chef from "../../images/chef.jpg";
 
 export const Box = styled.div`
     box-sizing: border-box;
-    height: 90vh;
+    height: 91vh;
     padding-top: 20px;
     margin: 0px;
     flex-direction: row;
