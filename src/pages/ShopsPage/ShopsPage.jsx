@@ -1,4 +1,4 @@
-import {Box} from './ShopsPage.styled'
+import { Box } from './ShopsPage.styled';
 
 function ShopsPage() {
     return (

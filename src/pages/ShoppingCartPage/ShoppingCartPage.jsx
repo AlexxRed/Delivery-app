@@ -1,6 +1,11 @@
-function ShoppingCartPage(){
+import { Box } from './ShoppingCartPage.sryled';
+
+function ShoppingCartPage() {
     return (
-        <h1>Shopping Cart Page</h1>
+        <Box>
+            <h1>Shopping Cart Page</h1>
+        </Box>
+        
     )
 };
 

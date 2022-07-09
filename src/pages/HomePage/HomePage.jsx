@@ -1,4 +1,6 @@
-import { Box } from './HomePage.styled'
+import { Box, Text } from './HomePage.styled'
+import { Link } from "react-router-dom";
+
 
 function HomePage() {
     // const isLogin = useSelector(authSelectors.getIsLoggedIn);
@@ -17,7 +19,12 @@ function HomePage() {
                 <Link to={refs.registerPage}>Please go to Register</Link>
             </>
             } */}
-            <h1>Home page</h1>
+            <Text>Place an order and get it delivered to your home. We all know that the best restaurant is at home.
+                <Link to="/shops"
+                    style={{ textDecoration: "none", fontSize: 18, color: "#2fa08dc3" }}>
+                    Go to your favorite dishes...
+                </Link>
+            </Text>
         </Box>
     )
 };

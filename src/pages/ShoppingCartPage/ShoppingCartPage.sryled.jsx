@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import wood from "../../images/wood.jpg";
+import food from "../../images/prepare.jpg";
 
 export const Box = styled.div`
     box-sizing: border-box;
@@ -7,7 +7,7 @@ export const Box = styled.div`
     padding-top: 20px;
     margin: 0px;
     flex-direction: row;
-    background-image: url(${wood});
+    background-image: url(${food});
     background-repeat: no-repeat;
     background-color: rgb(250, 250, 250);
     background-size: cover;
