@@ -42,6 +42,17 @@ export const Header = styled.header`
     margin-bottom: 0px;
     background-color: #33a02ff0;
     border-bottom: 1px solid #0a415a;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0px;
+    left: auto;
+    right: 0px;
 `;
 export const Navigation = styled.nav`
     display: flex;

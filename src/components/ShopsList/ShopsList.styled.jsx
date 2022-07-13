@@ -10,6 +10,7 @@ export const List = styled.ul`
     border-radius: 5px;
     margin-left: 30px;
     margin-right: auto;
+    margin-top:100px;
     background-color: #8080809d;
 `;
 
