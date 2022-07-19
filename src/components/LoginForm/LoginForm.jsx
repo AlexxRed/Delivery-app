@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import { LableForm, Box, LogForm, FormTitle, InputForm, FormButton, Text } from "./LoginForm.styled";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import  validationSchemaLogin  from "../../services/schemaValidationLogin";
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import  operations  from '../../redux/auth/authOperations';
+import { useDispatch } from 'react-redux';
+import  operations  from '../../redux/auth/authOperations';
 
 
 
 export default function LoginForm() {
-    // const dispatch = useDispatch();
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+    const dispatch = useDispatch();
+
 
     const initialValues = {
         email: '',
@@ -21,6 +19,7 @@ export default function LoginForm() {
 
     const handleSubmit = (values, { resetForm }) => {
         console.log(values);
+        dispatch(operations.logIn(values));
         resetForm();
     };
 

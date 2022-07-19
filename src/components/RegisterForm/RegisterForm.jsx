@@ -4,25 +4,26 @@ import { Formik, ErrorMessage } from 'formik';
 import validationSchemaRegister from '../../services/validationSchemaRegister';
 import { Link } from "react-router-dom";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-// import { useDispatch } from 'react-redux';
-// import  operations  from '../../redux/auth/authOperations';
+import { useDispatch } from 'react-redux';
+import  operations  from '../../redux/auth/authOperations';
 
 
 
 export default function RegisterPage() {
-    // const dispatch = useDispatch();
-    // const [name, setName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+    const dispatch = useDispatch();
+
 
     const initialValues = {
         name: '',
         email: '',
+        phone: '',
         password: '',
+        repeat_password: ''
     };
 
 
     const handleSubmit = (values, { resetForm }) => {
+        dispatch(operations.register(values));
         console.log(values);
         resetForm();
     };
@@ -58,6 +59,16 @@ export default function RegisterPage() {
                     </LableForm>
                     <ErrorMessage name="email" render={renderError} />
 
+                    <LableForm htmlFor="phone">
+                    Phone
+                        <InputForm
+                            type="phone"
+                            name="phone"
+                            placeholder="Your phone number"        
+                        />
+                    </LableForm>
+                    <ErrorMessage name="phone" render={renderError} />
+
                     <LableForm htmlFor="password">
                     Password
                         <InputForm
@@ -67,6 +78,16 @@ export default function RegisterPage() {
                         />
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />
+
+                    <LableForm htmlFor="repeat_password">
+                    Repeat password
+                        <InputForm
+                            type="repeat_password"
+                            name="repeat_password"
+                            placeholder="Repeat password"
+                        />
+                    </LableForm>
+                    <ErrorMessage name="repeat_password" render={renderError} />
 
                     <FormButton type="submit">Register</FormButton>
                 </RegisterForm>

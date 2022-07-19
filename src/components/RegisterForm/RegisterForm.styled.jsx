@@ -13,7 +13,7 @@ export const Box = styled.div`
     flex-wrap: wrap;
     margin-top: 200px;
     max-width: 380px;
-    max-height: 380px;
+    max-height: 580px;
     background-color: #03c03c;
     border-radius: 15px;
     padding: 20px;
