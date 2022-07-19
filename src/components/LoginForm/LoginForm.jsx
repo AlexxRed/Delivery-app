@@ -56,7 +56,7 @@ export default function LoginForm() {
             </LogForm>
             </Formik>
                 
-            <Text>Don’t have an account?</Text>
+            <Text>Don`t have an account?</Text>
             <Text>
                 <Link to="/register"
                     style={{ textDecoration: "none", fontSize: 18, color: "#b027da" }}>

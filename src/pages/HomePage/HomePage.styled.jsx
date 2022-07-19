@@ -26,6 +26,6 @@ export const Text = styled.h3`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: auto;
+    margin-top: 350px;
     color: #33a02f86;
 `;
