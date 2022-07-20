@@ -7,13 +7,11 @@ const initialState = {
     error: null,
 }
 
-export const contactsSlice = createSlice({
+export const shopsSlice = createSlice({
     name: 'shops',
     initialState,
     reducers: {
-    setFilter: (state, action) => {
-        state.filter = action.payload;
-        },
+    // standard reducer logic, with auto-generated action types per reducer
     },
     extraReducers: {
         [fetchAllShops.fulfilled]: (state, action) => {
@@ -34,7 +32,7 @@ export const contactsSlice = createSlice({
 
 
 
-export const shopsSliceReducer = contactsSlice.reducer;
+export const shopsSliceReducer = shopsSlice.reducer;
 
 
 export const getShops = state => state.shops.items;

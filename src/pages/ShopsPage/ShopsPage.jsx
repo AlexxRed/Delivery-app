@@ -5,7 +5,6 @@ function ShopsPage() {
     return (
         <Box>
             <ShopsList/>
-            
         </Box>
         
     )

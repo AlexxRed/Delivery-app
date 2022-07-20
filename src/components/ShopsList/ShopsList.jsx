@@ -1,19 +1,35 @@
 // import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { List, ListItem, ShopAvatar, ShopBox, ShopName } from './ShopsList.styled';
+import { useSelector, useDispatch } from 'react-redux';
+import { getShops } from '../../redux/shopsSlice';
+import { fetchAllShops} from '../../redux/shopsOperations';
 
-const availableShops = ['Burger House','Saladder','JapanCO','Bakery Place','Pizza Party','Only Meat']
 
-const ShopsList = () => {
-    // const isLoading = false;
+export default function ShopsList() {
+    const dispatch = useDispatch();
+    const availableShops = useSelector(getShops);
+    
+
+    useEffect(() => {
+        dispatch(fetchAllShops())
+    }, [dispatch])
+
+    
+    console.log(availableShops);
+    
+    
+    // const availableShops = ['Burger House','Saladder','JapanCO','Bakery Place','Pizza Party','Only Meat']
+
     return (
         <List>
             {/* {isLoading && <Loader/>} */}
             {availableShops.length === 0 && <h3>...oops something went wrong :(</h3>}  
             {availableShops.map((item) => (
-                <ListItem key={item}>
+                <ListItem key={item._id}>
                     <ShopBox>
                         <ShopAvatar />
-                        <ShopName>{item}</ShopName>
+                        <ShopName>{item.shop}</ShopName>
                     </ShopBox>
                 </ListItem>
             )
@@ -23,27 +39,7 @@ const ShopsList = () => {
     )
 };
 
-export default ShopsList;
 
-// <ul className={css.companylist}>
-//             <li className={css.companylist_item}>
-//             <NavLink className={css.companylist_link} to={'macdonny'}>
-//                 Mac
-//             </NavLink>
-//             </li>
-//             <li className={css.companylist_item}>
-//             <NavLink className={css.companylist_link} to={'kfs'}>
-//                 KFc
-//             </NavLink>
-//             </li>
-//             <li className={css.companylist_item}>
-//             <NavLink className={css.companylist_link} to={'pizzaday'}>
-//                 Pizza
-//             </NavLink>
-//             </li>
-//             <li className={css.companylist_item}>
-//             <NavLink className={css.companylist_link} to={'gastrocafe'}>
-//                 Sal
-//             </NavLink>
-//             </li>
-//         </ul>
+
+
+
