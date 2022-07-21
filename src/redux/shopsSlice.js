@@ -3,6 +3,7 @@ import { fetchAllShops } from './shopsOperations';
 
 const initialState = {
     items: [],
+    activeShop: '',
     isLoading: true,
     error: null,
 }
@@ -11,7 +12,9 @@ export const shopsSlice = createSlice({
     name: 'shops',
     initialState,
     reducers: {
-    // standard reducer logic, with auto-generated action types per reducer
+        setShop: (state, action) => {
+        state.activeShop = action.payload;
+        },
     },
     extraReducers: {
         [fetchAllShops.fulfilled]: (state, action) => {
@@ -33,6 +36,8 @@ export const shopsSlice = createSlice({
 
 
 export const shopsSliceReducer = shopsSlice.reducer;
+export const { setShop } = shopsSlice.actions;
 
 
 export const getShops = state => state.shops.items;
+export const getActiveShop = state => state.shops.activeShop;
