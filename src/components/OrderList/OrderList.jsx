@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { List, ListItem, OrderImage, OrderBox, OrderText, ListButton } from './OrderList.styled';
-import { getOrder, setOrder } from '../../redux/orderSlice';
+import { getOrder} from '../../redux/orderSlice';
 
 
 export default function OrderList() {
