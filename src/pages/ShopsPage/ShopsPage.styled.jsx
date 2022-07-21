@@ -7,7 +7,7 @@ export const Box = styled.div`
     box-sizing: border-box;
     /* height: 100vh; */
     min-height:100vh;
-    width: fit-content;
+    width: 100%;
     padding-top: 20px;
     margin: 0px;
     flex-direction: row;

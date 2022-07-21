@@ -9,7 +9,8 @@ export const List = styled.ul`
     height: fit-content;
     padding-left: 0px;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
     /* margin-right: auto; */
     margin-top:100px;
     background-color: #8080809d;

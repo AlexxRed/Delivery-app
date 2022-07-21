@@ -6,7 +6,7 @@ export const List = styled.ul`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 300px;
+    max-width: 300px;
     height: fit-content;
     padding-left: 0px;
     border-radius: 5px;
@@ -22,6 +22,23 @@ export const ListItem = styled.li`
     justify-content: space-between;
     border-bottom: 1px dotted #2778a7;
     margin-bottom: 0px;
+    &.active {
+        color: #37d66cd4;
+    }
+`;
+
+export const ListButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    &:hover,
+    &:focus {
+            background-color:#33a02ff0;
+        }
+    &.active {
+        background-color:#33a02ff0;
+    }
 `;
 
 export const ShopAvatar = styled(FastfoodIcon)`

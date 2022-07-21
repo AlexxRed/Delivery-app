@@ -25,8 +25,8 @@ export default function ShopsCart() {
                 <ListItem key={name}>
                     <CardPhoto src={image} alt={name} />
                     <CardName>{name}</CardName>
-                    <p>{price}</p>
-                    <button>add</button>
+                    <p>$ {price}</p>
+                    <button>Add to cart</button>
                 </ListItem>
             ))}   
         </List>    

@@ -1,6 +1,6 @@
 // import { NavLink } from 'react-router-dom';
 import React, { useEffect } from 'react';
-import { List, ListItem, ShopAvatar, ShopBox, ShopName } from './ShopsList.styled';
+import { List, ListItem, ShopAvatar, ShopBox, ShopName, ListButton } from './ShopsList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { getShops, setShop } from '../../redux/shopsSlice';
 import { fetchAllShops } from '../../redux/shopsOperations';
@@ -21,12 +21,14 @@ export default function ShopsList() {
             {/* {isLoading && <Loader/>} */}
             {availableShops.length === 0 && <h3>...oops something went wrong :(</h3>}  
             {availableShops.map((item) => (
-                <ListItem key={item._id} onClick={() => dispatch(setShop(item.shop))}>
-                    <ShopBox>
-                        <ShopAvatar />
-                        <ShopName>{item.shop}</ShopName>
-                    </ShopBox>
-                </ListItem>
+                <ListButton>
+                    <ListItem key={item._id} onClick={() => dispatch(setShop(item.shop))}>                    
+                        <ShopBox>
+                            <ShopAvatar />
+                            <ShopName>{item.shop}</ShopName>
+                        </ShopBox>                    
+                    </ListItem>
+                </ListButton>
             )
             )}
         </List>
