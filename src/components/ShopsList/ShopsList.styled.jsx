@@ -2,14 +2,16 @@ import styled from '@emotion/styled';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 export const List = styled.ul`
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 350px;
+    width: 300px;
+    height: fit-content;
     padding-left: 0px;
     border-radius: 5px;
     margin-left: 30px;
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-top:100px;
     background-color: #8080809d;
 `;
@@ -39,7 +41,7 @@ export const ShopBox = styled.div`
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 300px;
+    width: 260px;
     padding: 15px;
 `;
 export const ShopName = styled.p`

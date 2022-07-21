@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getShops } from '../../redux/shopsSlice';
 import { fetchAllShops } from '../../redux/shopsOperations';
 import { getActiveShop } from '../../redux/shopsSlice';
+import { List, ListItem, CardPhoto, CardName } from './ShopCard.styled';
 
 
 export default function ShopsCart() {
@@ -19,15 +20,15 @@ export default function ShopsCart() {
     console.log(findShop);
 
     return (
-        <ul>
+        <List>
             {findShop && findShop.products.map(({name, price, image}) => (
-                <li key={name}>
-                    <img src={image} alt={name} />
-                    <h3>{name}</h3>
+                <ListItem key={name}>
+                    <CardPhoto src={image} alt={name} />
+                    <CardName>{name}</CardName>
                     <p>{price}</p>
                     <button>add</button>
-                </li>
+                </ListItem>
             ))}   
-        </ul>    
+        </List>    
     )
 };
