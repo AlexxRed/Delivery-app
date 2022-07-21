@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { shopsSliceReducer }  from './shopsSlice';
+import { shopsSliceReducer } from './shopsSlice';
+import { orderSliceReducer } from './orderSlice';
 import authSliceReducer from './auth/authSlice'
 // import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
@@ -25,6 +26,7 @@ export const store = configureStore({
     reducer: {
         auth: persistReducer(authPersistConfig, authSliceReducer),
         shops: shopsSliceReducer,
+        order: orderSliceReducer,
     },
     middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(
         {

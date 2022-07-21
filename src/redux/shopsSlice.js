@@ -6,7 +6,7 @@ const initialState = {
     activeShop: '',
     isLoading: true,
     error: null,
-}
+};
 
 export const shopsSlice = createSlice({
     name: 'shops',

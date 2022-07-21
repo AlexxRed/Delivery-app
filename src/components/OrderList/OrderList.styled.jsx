@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
+
 export const List = styled.ul`
     display: flex;
-    position: fixed;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 300px;
+    max-width: 500px;
     height: fit-content;
     padding-left: 0px;
     border-radius: 5px;
@@ -25,9 +24,6 @@ export const ListItem = styled.li`
     justify-content: space-between;
     border-bottom: 1px dotted #2778a7;
     margin-bottom: 0px;
-    &.active {
-        color: #37d66cd4;
-    }
 `;
 
 export const ListButton = styled.button`
@@ -35,44 +31,26 @@ export const ListButton = styled.button`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0px;
-    &:hover,
-    &:focus {
-            background-color:#33a02ff0;
-        }
-    &.active {
-        background-color:#33a02ff0;
-    }
 `;
 
-export const ShopAvatar = styled(FastfoodIcon)`
+export const OrderImage = styled.img`
     display: block;
-    align-items: center;
-    fill: #33a02ff0;
-    width: 40px;
-    height: 40px;
-    &:hover,
-    &:focus {
-            fill: #d637b4d5;
-        }
+    width: 100px;
+    height: 60px;
 `;
 
-export const ShopBox = styled.div`
+export const OrderBox = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 260px;
+    width: 400px;
     padding: 15px;
 `;
-export const ShopName = styled.p`
+export const OrderText = styled.p`
     display:block;
-    padding-left: 15px;
     color: #0a415a;
     font-size: 24px;
     font-weight: 500;
     margin: 0px;
-    &:hover,
-    &:focus {
-            color: #d637b4d5;
-        }
 `;

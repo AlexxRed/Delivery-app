@@ -21,8 +21,8 @@ export default function ShopsList() {
             {/* {isLoading && <Loader/>} */}
             {availableShops.length === 0 && <h3>...oops something went wrong :(</h3>}  
             {availableShops.map((item) => (
-                <ListButton>
-                    <ListItem key={item._id} onClick={() => dispatch(setShop(item.shop))}>                    
+                <ListButton key={item._id}>
+                    <ListItem onClick={() => dispatch(setShop(item.shop))}>                    
                         <ShopBox>
                             <ShopAvatar />
                             <ShopName>{item.shop}</ShopName>
