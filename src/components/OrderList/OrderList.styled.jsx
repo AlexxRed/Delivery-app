@@ -11,7 +11,7 @@ export const List = styled.ul`
     border-radius: 5px;
     margin-left: 30px;
     /* margin-right: auto; */
-    margin-top:60px;
+    margin-top:80px;
     background-color: #8080809d;
         @media (max-width: 420px) {
         max-width: 150px;

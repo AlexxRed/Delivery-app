@@ -2,8 +2,12 @@ import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } 
 import { Formik, ErrorMessage } from 'formik';
 import validationSchemaRegister from '../../services/validationSchemaRegister';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 // import { useDispatch } from 'react-redux';
 // import  operations  from '../../redux/auth/authOperations';
+
+
+
 export default function RegisterPage() {
     // const dispatch = useDispatch();
 
@@ -26,7 +30,7 @@ export default function RegisterPage() {
 
     return (
         <Box>
-            <FormTitle>Please register to use the Delivery service</FormTitle>
+            <FormTitle>User information: </FormTitle>
             
             <Formik
                 initialValues={initialValues}

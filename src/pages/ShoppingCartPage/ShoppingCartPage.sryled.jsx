@@ -3,10 +3,11 @@ import food from "../../images/prepare.jpg";
 
 export const Box = styled.div`
     display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
     box-sizing: border-box;
     min-height:100vh;
     width: 100%;
-    padding-top: 20px;
     margin: 0px;
     flex-direction: row;
     background-image: url(${food});
@@ -15,4 +16,12 @@ export const Box = styled.div`
     background-size: cover;
     background-position: center ;
     background-attachment: fixed;
-    `
+`;
+
+export const Wrapper = styled.div`
+        margin-top: 80px;
+    display: block;
+    background-color: #03c03c;
+    padding: 5px;
+    border-radius: 15px;
+`;

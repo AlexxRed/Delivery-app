@@ -6,7 +6,7 @@ export const Box = styled.div`
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 10px;
     max-width: 480px;
     max-height: 580px;
     background-color: #03c03c;
@@ -29,7 +29,7 @@ export const FormTitle = styled.h3`
 
 export const RegisterForm = styled(Form)`
     display: block;
-    width: 320px;
+    max-width: 440px;
 `;
 
 export const LableForm = styled.label`
@@ -41,13 +41,14 @@ export const LableForm = styled.label`
 `;
 
 export const InputForm = styled(Field )`
-    display: flex;
+    display: block;
+    width: 400px;
     border: 0px;
     box-sizing: content-box;
     outline: none;
-    padding: 10px;
+    padding: 5px;
+    height: 40px;
     flex-direction: column;
-    margin-bottom: 12px;
     border-radius: 5px;
     &:hover,
     &:focus {

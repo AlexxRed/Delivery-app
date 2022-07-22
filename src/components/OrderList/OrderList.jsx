@@ -16,9 +16,9 @@ export default function OrderList() {
     return (
         <List>
             {/* {isLoading && <Loader/>} */}
-            {<OrderText>Your order:</OrderText>}
             {availableOrdes.length === 0 && <h3>Add products :(</h3>}  
-            {availableOrdes.map((item) => (
+            {availableOrdes.length !== 0 && <OrderText>Your order:</OrderText>}
+            {availableOrdes.length !== 0 && availableOrdes.map((item) => (
                     <ListItem key={item.name} onClick={() => console.log('add')}>                    
                         <OrderBox>
                             <OrderImage src={item.image} alt={item.name} width="100" height="60" />
@@ -30,7 +30,7 @@ export default function OrderList() {
                     </ListItem>
             )
             )}
-            {<OrderText>Total price ${totalPrice}</OrderText>}
+            {availableOrdes.length !== 0 && <OrderText style={{ color: '#4ff339f6'}}>Total price ${totalPrice}</OrderText>}
         </List>
 
     )
