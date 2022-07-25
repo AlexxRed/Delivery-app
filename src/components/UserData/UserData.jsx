@@ -30,7 +30,7 @@ export default function RegisterPage() {
 
     return (
         <Box>
-            <FormTitle>User information: </FormTitle>
+            <FormTitle>Delivery information: </FormTitle>
             
             <Formik
                 initialValues={initialValues}
