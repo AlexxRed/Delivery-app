@@ -2,6 +2,8 @@ import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } 
 import { Formik, ErrorMessage } from 'formik';
 import validationSchemaRegister from '../../services/validationSchemaRegister';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { getOrder } from '../../redux/orderSlice';
+import { useSelector } from 'react-redux';
 
 // import { useDispatch } from 'react-redux';
 // import  operations  from '../../redux/auth/authOperations';
@@ -10,7 +12,11 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export default function RegisterPage() {
     // const dispatch = useDispatch();
+    const availableOrdes = useSelector(getOrder);
 
+    const totalPrice = availableOrdes.reduce((previousValue, element) => {
+        return previousValue + element.price * element.quantity;
+    }, 0);
 
     const initialValues = {
         name: '',
@@ -77,11 +83,11 @@ export default function RegisterPage() {
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />
 
+                    <Text>Total Price ${totalPrice}</Text>
+                    
                     <FormButton type="submit">Confirm order</FormButton>
                 </RegisterForm>
             </Formik>
-            
-            <Text>Total cost</Text>
         </Box>
     );
 };

@@ -44,7 +44,7 @@ export const OrderBox = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 400px;
+    width: 440px;
     padding: 15px;
 `;
 export const OrderText = styled.p`

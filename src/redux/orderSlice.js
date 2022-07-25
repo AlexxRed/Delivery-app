@@ -13,12 +13,34 @@ export const orderSlice = createSlice({
         },
         removeOrder: (state, action) => {
             state.order = state.order.filter(
-                order => order !== action.payload)
+                order => order.name !== action.payload)
+        },
+        increaseQuantity: (state, action) => {
+            state.order = state.order.map(item => {
+            if (item.name === action.payload) {
+                return  { ...item, quantity: item.quantity + 1 }
+            } else {
+                return item
+            }
+        })
+        },
+        decreaseQuantity: (state, action) => {
+            state.order = state.order.map(item => {
+                if (item.quantity === 1 && item.name === action.payload) {
+                state.order.filter(order => order.name !== action.payload)
+            }
+            if (item.quantity !== 1 && item.name === action.payload) {
+                return  { ...item, quantity: item.quantity - 1 }
+            }
+            else {
+                return item
+            }
+        })
         }
     }
 });
 
 export const orderSliceReducer = orderSlice.reducer;
-export const { setOrder, removeOrder } = orderSlice.actions;
+export const { setOrder, removeOrder, increaseQuantity, decreaseQuantity } = orderSlice.actions;
 
 export const getOrder = state => state.order.order

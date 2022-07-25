@@ -27,7 +27,7 @@ export default function ShopsCart() {
             Notify.info(`You have already added ${name} to your order`)
             return
         }
-        dispatch(setOrder({name, price, image}))
+        dispatch(setOrder({name, price, image, quantity:1}))
     },[dispatch, order])
 
     // const addProduct = (name, price, image) => {
