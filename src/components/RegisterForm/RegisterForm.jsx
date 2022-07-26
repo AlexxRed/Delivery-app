@@ -23,8 +23,8 @@ export default function RegisterPage() {
 
 
     const handleSubmit = (values, { resetForm }) => {
-        dispatch(operations.register(values));
         console.log(values);
+        dispatch(operations.register(values));
         resetForm();
     };
 
@@ -35,16 +35,16 @@ export default function RegisterPage() {
             <FormTitle>Please register to use the Delivery service</FormTitle>
             
             <Formik
-                initialValues={initialValues}
-                onSubmit={handleSubmit}
-                validationSchema={validationSchemaRegister}
+            initialValues={initialValues}
+            onSubmit={handleSubmit}
+            validationSchema={validationSchemaRegister}
             >
-                <RegisterForm autoComplete="on">
+            <RegisterForm autoComplete="off">
                     <LableForm htmlFor="name">
                     Name
                         <InputForm type="text"
                             name="name"
-                            placeholder="Your name"
+                            placeholder="Arnold Steel"
                         />
                     </LableForm>
                     <ErrorMessage name="name" render={renderError} />
@@ -54,7 +54,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="email"
                             name="email"
-                            placeholder="Your email"        
+                            placeholder="Example@gmail.com"        
                         />
                     </LableForm>
                     <ErrorMessage name="email" render={renderError} />
@@ -64,7 +64,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="phone"
                             name="phone"
-                            placeholder="Your phone number"        
+                            placeholder="+380*********"        
                         />
                     </LableForm>
                     <ErrorMessage name="phone" render={renderError} />
@@ -74,7 +74,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="password"
                             name="password"
-                            placeholder="Password"
+                            placeholder="Min 8 characters"
                         />
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />
@@ -82,7 +82,7 @@ export default function RegisterPage() {
                     <LableForm htmlFor="repeat_password">
                     Repeat password
                         <InputForm
-                            type="repeat_password"
+                            type="password"
                             name="repeat_password"
                             placeholder="Repeat password"
                         />

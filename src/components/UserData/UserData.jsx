@@ -33,8 +33,11 @@ export default function RegisterPage() {
 
     const handleSubmit = (values, { resetForm }) => {
         // dispatch(operations.register(values));
+        if (values.name === '') {
+            Notify.info('Add your name')
+        }
         console.log(values);
-        navigate(`${refs.onDelivery}`)
+        navigate(`/${refs.onDelivery}`)
         resetForm();
     };
 
@@ -54,7 +57,7 @@ export default function RegisterPage() {
                     Name
                         <InputForm type="text"
                             name="name"
-                            placeholder="Your name"
+                            placeholder="Arnold Steel"
                         />
                     </LableForm>
                     <ErrorMessage name="name" render={renderError} />
@@ -64,7 +67,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="email"
                             name="email"
-                            placeholder="Your email"        
+                            placeholder="Example@gmail.com"        
                         />
                     </LableForm>
                     <ErrorMessage name="email" render={renderError} />
@@ -74,7 +77,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="phone"
                             name="phone"
-                            placeholder="Your phone number"        
+                            placeholder="+380*********"        
                         />
                     </LableForm>
                     <ErrorMessage name="phone" render={renderError} />
@@ -84,7 +87,7 @@ export default function RegisterPage() {
                         <InputForm
                             type="address"
                             name="address"
-                            placeholder="Address"
+                            placeholder="Myrna Str. 110/10"
                         />
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />

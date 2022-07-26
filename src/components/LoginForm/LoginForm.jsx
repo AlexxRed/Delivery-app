@@ -36,14 +36,16 @@ export default function LoginForm() {
             validationSchema={validationSchemaLogin}
             >
             <LogForm autoComplete="off">
-                <LableForm htmlFor="email">Email
+                    <LableForm htmlFor="email">
+                        Email
                     <InputForm
                             name="email"
                             type="email"
                             placeholder="Your email" />
                 </LableForm>
                     <ErrorMessage name="name" render={renderError} />
-                <LableForm htmlFor="password">Number
+                    <LableForm htmlFor="password">
+                        Password
                         <InputForm
                             aria-invalid="false"
                             name="password"
