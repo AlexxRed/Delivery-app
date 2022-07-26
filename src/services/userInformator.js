@@ -3,7 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // ================== Notiflix  init ==================
 export function infoStyle() {
     return Notify.init({
-    width: '300px',
+    width: '400px',
     position: 'center-top',
     closeButton: false,
     distance: '145px',

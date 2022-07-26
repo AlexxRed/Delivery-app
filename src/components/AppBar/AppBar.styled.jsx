@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
+// import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
+// import FlutterDashIcon from '@mui/icons-material/FlutterDash';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-export const Logo = styled(DinnerDiningIcon)`
+export const Logo = styled(LoyaltyIcon)`
     display: block;
     text-align: center;
     padding: 6px;
@@ -64,4 +67,36 @@ export const Navigation = styled.nav`
 export const Box = styled.div`
     display: flex;
     justify-content: center;
+`;
+
+export const Basket = styled(ShoppingCartIcon)`
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+    fill: #0e4e05;
+    &:hover,
+    &:focus {
+            fill: #d637b4d5;
+        }
+`;
+export const BasketText = styled.p`
+    position: absolute;
+    top: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    text-align:center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #33a02ff0;
+    padding:5px;
+    width: 6px;
+    height:6px;
+`;
+export const Wrapper = styled.div`
+    position: relative;
 `;

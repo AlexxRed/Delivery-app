@@ -1,5 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { List, ListItem, OrderImage, OrderBox, OrderText, ListButton } from './OrderList.styled';
+import {
+    List,
+    ListItem,
+    OrderImage,
+    OrderBox,
+    OrderText,
+    ButtonDelete,
+    ButtonAdd,
+    ButtonDecrease,
+    Wrapper
+} from './OrderList.styled';
 import { getOrder, removeOrder, increaseQuantity, decreaseQuantity} from '../../redux/orderSlice';
 
 
@@ -15,7 +25,7 @@ export default function OrderList() {
         <>
             <List>
                 {/* {isLoading && <Loader/>} */}
-                {availableOrdes.length === 0 && <h3>Add products :(</h3>}  
+                {availableOrdes.length === 0 && <h3>Choose what you want to order.</h3>}  
                 {availableOrdes.length !== 0 && <OrderText>Your order:</OrderText>}
                 {availableOrdes.length !== 0 && availableOrdes.map((item) => (
                         <ListItem key={item.name} >                  
@@ -23,10 +33,13 @@ export default function OrderList() {
                                 <OrderImage src={item.image} alt={item.name} width="100" height="60" />
                                 <OrderText>{item.name}</OrderText>
                                 <OrderText>$ {item.price}</OrderText>
-                                <ListButton onClick={() => dispatch(increaseQuantity(item.name))}>+</ListButton>
-                                <OrderText>{item.quantity}</OrderText>
-                                <ListButton onClick={() => dispatch(decreaseQuantity(item.name))}>-</ListButton>
-                                <ListButton onClick={() => dispatch(removeOrder(item.name))}>delete</ListButton>
+                                <Wrapper>
+                                    <ButtonAdd onClick={() => dispatch(increaseQuantity(item.name))}>+</ButtonAdd>
+                                    <OrderText>{item.quantity}</OrderText>
+                                    <ButtonDecrease onClick={() => dispatch(decreaseQuantity(item.name))}>-</ButtonDecrease>
+                                    <ButtonDelete onClick={() => dispatch(removeOrder(item.name))}>delete</ButtonDelete>
+                                </Wrapper>
+                                
                             </OrderBox>                    
                         </ListItem>
                 )

@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
+// import FastfoodIcon from '@mui/icons-material/Fastfood';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+
 export const List = styled.ul`
     display: flex;
     position: fixed;
@@ -44,7 +46,7 @@ export const ListButton = styled.button`
     }
 `;
 
-export const ShopAvatar = styled(FastfoodIcon)`
+export const ShopAvatar = styled(AutoStoriesIcon)`
     display: block;
     align-items: center;
     fill: #33a02ff0;

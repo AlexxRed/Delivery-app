@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 export const List = styled.ul`
     display: flex;
@@ -50,7 +53,47 @@ export const OrderBox = styled.div`
 export const OrderText = styled.p`
     display:block;
     color: #0a415a;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     margin: 0px;
+`;
+
+export const ButtonDelete = styled(DeleteForeverIcon)`
+    cursor: pointer;
+    margin-left: 15px;
+    border-radius: 3px;
+    padding: 5px 5px;
+    color: #ffffff;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+        background-color: #bb4d1a;
+    }
+`;
+export const ButtonAdd = styled(AddCircleOutlineIcon)`
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px 5px;
+    color: #5e5b5b;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+        fill:green;
+    }
+`;
+export const ButtonDecrease = styled(RemoveCircleOutlineIcon)`
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px 5px;
+    color: #5e5b5b;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+        fill: #bb4d1a;
+    }
+`;
+export const Wrapper = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
 `;
