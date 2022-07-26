@@ -4,14 +4,16 @@ import orderSchemaValidation from '../../services/orderSchemaValidation';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getOrder } from '../../redux/orderSlice';
 import { useSelector } from 'react-redux';
-
+import { useNavigate } from 'react-router-dom';
+import { refs } from '../../services/refs';
 // import { useDispatch } from 'react-redux';
-// import  operations  from '../../redux/auth/authOperations';
+
 
 
 
 export default function RegisterPage() {
     // const dispatch = useDispatch();
+    const navigate = useNavigate();
     const availableOrdes = useSelector(getOrder);
 
 
@@ -29,11 +31,12 @@ export default function RegisterPage() {
     };
 
 
-    // const handleSubmit = (values, { resetForm }) => {
-    //     dispatch(operations.register(values));
-    //     console.log(values);
-    //     resetForm();
-    // };
+    const handleSubmit = (values, { resetForm }) => {
+        // dispatch(operations.register(values));
+        console.log(values);
+        navigate(`${refs.onDelivery}`)
+        resetForm();
+    };
 
     const renderError = message => Notify.info(`${message}`);
 
@@ -43,7 +46,7 @@ export default function RegisterPage() {
             
             <Formik
                 initialValues={initialValues}
-                onSubmit={console.log("handleSubmit")}
+                onSubmit={handleSubmit}
                 validationSchema={orderSchemaValidation}
             >
                 <RegisterForm autoComplete="on">
@@ -85,12 +88,10 @@ export default function RegisterPage() {
                         />
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />
-
-                    <Text>Total Price ${totalPrice}</Text>
-                    
                     <FormButton type="submit">Confirm order</FormButton>
                 </RegisterForm>
             </Formik>
+            <Text>Total Price ${totalPrice}</Text>
         </Box>
     );
 };
