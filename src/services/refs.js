@@ -4,5 +4,6 @@ export const refs = {
     shoppingCartPage:'shoppingcart',
     registerPage: 'register',
     loginPage: 'login',
-    notFoundPage: '*'
+    notFoundPage: '*',
+    onDelivery: 'delivery',
 };

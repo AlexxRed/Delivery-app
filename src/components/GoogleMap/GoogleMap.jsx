@@ -1,6 +1,8 @@
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import React, { useEffect, useRef } from "react";
 import { Box } from './GoogleMap.styled';
+import { useGeolocated } from "react-geolocated";
+
 
 
 const render = (status) => {
@@ -14,7 +16,7 @@ function MyMapComponent({
     zoom,
     }) {
     const ref = useRef();
-
+    
     useEffect(() => {
         new window.google.maps.Map(ref.current, {
         center,
@@ -27,15 +29,24 @@ function MyMapComponent({
     />;
 }
 
-export default function GoogleMap({center,zoom,}){
+export default function GoogleMap({ center, zoom, }) {
+
+        const { coords} =
+        useGeolocated({
+            positionOptions: {
+                enableHighAccuracy: false,
+            },
+            userDecisionTimeout: 5000,
+        });
+    
     return (
     <Box>
-        <Wrapper apiKey="AIzaSyBFAseYHPAqdGgXTXGNSsmzE_AWmKS5BRQ" render={render} >
-            <MyMapComponent center={{lat: 50.450001, lng: 30.523333}} zoom={5} isMarkerShown={true}/>
+            <Wrapper apiKey="AIzaSyBFAseYHPAqdGgXTXGNSsmzE_AWmKS5BRQ" render={render} >
+                {coords &&
+                    <MyMapComponent center={{ lat: coords.latitude, lng: coords.longitude }} zoom={5} isMarkerShown={true} />}
+                    {!coords &&<MyMapComponent center={{lat: 1, lng: 1}} zoom={20} isMarkerShown={true}/>}
         </Wrapper>
     
     </Box>
     )
 }
-
-            

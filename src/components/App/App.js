@@ -11,6 +11,7 @@ import ShoppingCartPage from "../../pages/ShoppingCartPage/ShoppingCartPage";
 import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
 import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
+import OnDelivery from "../../pages/OnDelivery/OnDelivery"
 infoStyle();
 
 
@@ -38,7 +39,8 @@ function App() {
 
               }
           />
-          <Route path={refs.notFoundPage} element={<NotFoundPage/>}/> 
+          <Route path={refs.notFoundPage} element={<NotFoundPage />} />
+          <Route path={refs.onDelivery} element={<OnDelivery/>}/> 
         </Route>
       </Routes>
     </>

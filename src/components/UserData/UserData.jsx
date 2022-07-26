@@ -1,6 +1,6 @@
 import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } from "./UserData.styled";
 import { Formik, ErrorMessage } from 'formik';
-import validationSchemaRegister from '../../services/validationSchemaRegister';
+import orderSchemaValidation from '../../services/orderSchemaValidation';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getOrder } from '../../redux/orderSlice';
 import { useSelector } from 'react-redux';
@@ -14,9 +14,12 @@ export default function RegisterPage() {
     // const dispatch = useDispatch();
     const availableOrdes = useSelector(getOrder);
 
+
+
     const totalPrice = availableOrdes.reduce((previousValue, element) => {
         return previousValue + element.price * element.quantity;
     }, 0);
+
 
     const initialValues = {
         name: '',
@@ -41,7 +44,7 @@ export default function RegisterPage() {
             <Formik
                 initialValues={initialValues}
                 onSubmit={console.log("handleSubmit")}
-                validationSchema={validationSchemaRegister}
+                validationSchema={orderSchemaValidation}
             >
                 <RegisterForm autoComplete="on">
                     <LableForm htmlFor="name">
