@@ -11,7 +11,6 @@ export function AppBar() {
     // const isLoggedIn = useSelector(authSelectors.getIsLoggedIn)
     const isLoggedIn = true;
     const order = useSelector(getOrder)
-    console.log(order.length);
 
     return (
         <Header>

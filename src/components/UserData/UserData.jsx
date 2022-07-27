@@ -2,17 +2,17 @@ import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } 
 import { Formik, ErrorMessage } from 'formik';
 import orderSchemaValidation from '../../services/orderSchemaValidation';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { getOrder } from '../../redux/orderSlice';
-import { useSelector } from 'react-redux';
+import { getOrder, clearOrder } from '../../redux/orderSlice';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { refs } from '../../services/refs';
-// import { useDispatch } from 'react-redux';
+
 
 
 
 
 export default function RegisterPage() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const availableOrdes = useSelector(getOrder);
 
@@ -38,6 +38,7 @@ export default function RegisterPage() {
         }
         console.log(values);
         navigate(`/${refs.onDelivery}`)
+        dispatch(clearOrder())
         resetForm();
     };
 
