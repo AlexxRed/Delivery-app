@@ -3,7 +3,6 @@ import axios from "axios";
 
 axios.defaults.baseURL = 'https://delivery-backend-project.herokuapp.com/api';
 
-// First, create the thunk
 export const fetchAllShops = createAsyncThunk(
     'shops/getAllContacts',
     async (_, { rejectWithValue }) => {

@@ -8,7 +8,7 @@ export const Box = styled.div`
     flex-wrap: wrap;
     margin-top: 10px;
     max-width: 480px;
-    max-height: 580px;
+    min-height: 780px;
     background-color: #03c03c;
     border-radius: 15px;
     padding: 20px;
@@ -17,6 +17,12 @@ export const Box = styled.div`
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+        @media (min-width: 320px) and (max-width: 1200px) {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+    }
 `;
 
 export const FormTitle = styled.h3`
@@ -24,12 +30,18 @@ export const FormTitle = styled.h3`
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
 `;
 
 export const RegisterForm = styled(Form)`
     display: block;
     max-width: 440px;
+    @media (min-width: 320px) and (max-width: 1200px) {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export const LableForm = styled.label`
@@ -42,7 +54,7 @@ export const LableForm = styled.label`
 
 export const InputForm = styled(Field )`
     display: block;
-    width: 400px;
+    min-width: 300px;
     border: 0px;
     box-sizing: content-box;
     outline: none;
@@ -62,6 +74,7 @@ export const FormButton = styled.button`
     border: 0px;
     outline: none;
     cursor: pointer;
+    margin-top: 10px;
     &:hover,
     &:focus {
         outline: none;

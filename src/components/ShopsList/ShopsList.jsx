@@ -14,12 +14,9 @@ export default function ShopsList() {
         dispatch(fetchAllShops())
     }, [dispatch])
 
-    // const availableShops = ['Burger House','Saladder','JapanCO','Bakery Place','Pizza Party','Only Meat']
-
     return (
         <List>
-            {/* {isLoading && <Loader/>} */}
-            {availableShops.length === 0 && <h3>...oops something went wrong :(</h3>}  
+            {availableShops.length === 0 && <h3>Please wait a moment</h3>}  
             {availableShops.map((item) => (
                 <ListButton key={item._id}>
                     <ListItem onClick={() => dispatch(setShop(item.shop))}>                    

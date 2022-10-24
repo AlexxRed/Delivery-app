@@ -5,6 +5,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getOrder, clearOrder } from '../../redux/orderSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import PaymentForm from "../../components/Payment/Payment";
 import { refs } from '../../services/refs';
 
 
@@ -92,6 +93,7 @@ export default function RegisterPage() {
                         />
                     </LableForm>
                     <ErrorMessage name="password" render={renderError} />
+                    <PaymentForm/>
                     <FormButton type="submit">Confirm order</FormButton>
                 </RegisterForm>
             </Formik>

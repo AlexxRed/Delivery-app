@@ -13,11 +13,12 @@ export const List = styled.ul`
     padding-left: 0px;
     border-radius: 5px;
     margin-left: 30px;
-    /* margin-right: auto; */
     margin-top:60px;
     background-color: #8080809d;
-        @media (max-width: 420px) {
-        max-width: 150px;
+        @media (min-width: 320px) and (max-width: 1200px) {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 

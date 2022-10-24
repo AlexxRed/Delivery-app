@@ -1,7 +1,6 @@
 import { Link, Header, Navigation, Box, Logo, Basket, BasketText, Wrapper} from './AppBar.styled';//Logo,LogoIcon 
 import { NavLink } from 'react-router-dom';
 import { refs } from '../../services/refs';
-import UserMenu from '../UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import {getOrder}from '../../redux/orderSlice'
 // import authSelectors from '../../redux/auth/authSelectors'
@@ -28,7 +27,6 @@ export function AppBar() {
                 </Box>
                 {isLoggedIn ?
                     <Box>
-                    <UserMenu></UserMenu>
                 </Box>
                         :
                 <Box>

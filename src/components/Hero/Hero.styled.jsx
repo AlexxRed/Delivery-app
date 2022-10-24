@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+// import chef from "../../images/chef.jpg";
 import about from "../../images/main/food-g861b60a3e_1920.jpg"
 
 export const Box = styled.div`
@@ -38,8 +39,3 @@ export const Hero = styled.h3`
         }
 
 `;
-
-export const TitleName = styled.h2`
-    display: block;
-    text-align: center;
-`

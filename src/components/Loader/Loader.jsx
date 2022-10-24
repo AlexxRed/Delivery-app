@@ -1,4 +1,4 @@
-// import { LoadingText } from './Loader.styled';
+
 import { Triangle } from 'react-loader-spinner';
 
 export const Loader = () => {
@@ -12,4 +12,3 @@ export const Loader = () => {
     )
 };
 
-    // return <LoadingText>loading...</LoadingText>

@@ -15,9 +15,14 @@ export const List = styled.ul`
     margin-left: 30px;
     /* margin-right: auto; */
     margin-top:80px;
-    background-color: #8080809d;
+    background-color: #808080d5;
         @media (max-width: 420px) {
-        max-width: 150px;
+        max-width: 280px;
+    }
+        @media (min-width: 320px) and (max-width: 1200px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 

@@ -2,8 +2,6 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import { refs } from "../../services/refs";
 import { infoStyle } from "../../services/userInformator";
-// import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute";
-// import PublicRoute from "../../pages/PublicRoute/PublicRoute";
 import Layout from "../Layout/Layout";
 import HomePage from "../../pages/HomePage/HomePage";
 import ShopsPage from "../../pages/ShopsPage/ShopsPage";
@@ -26,17 +24,13 @@ function App() {
           <Route
             path={refs.registerPage}
             element={
-
               <RegisterPage />
-            
             }
           />
           <Route
             path={refs.loginPage}
-              element={
-                
+              element={      
                   <LoginPage />
-
               }
           />
           <Route path={refs.notFoundPage} element={<NotFoundPage />} />

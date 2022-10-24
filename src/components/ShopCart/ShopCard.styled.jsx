@@ -7,23 +7,21 @@ export const List = styled.ul`
     flex-wrap: wrap;
     width: fit-content;
     height: fit-content;
-    padding-left: 30px;
     border-radius: 5px;
     margin-left: 15px;
     margin-right: 15px;
-    /* margin-right: auto; */
     margin-top:150px;
     background-color: #8080809d;
     list-style: none;
-    @media (max-width: 420px) {
-        max-width: 420px;
+    @media (min-width: 320px) and (max-width: 1200px) {
+        margin-top: 525px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-left: -55px;
     }
 `;
 
 export const ListItem = styled.li`
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     border-bottom: 1px  #2778a7;
     margin-bottom: 0px;
 `;
@@ -35,6 +33,10 @@ export const CardPhoto = styled.img`
     width: 600px;
     margin: 0px;
     border-radius: 10px;
+        @media (min-width: 320px) and (max-width: 1200px) {
+            max-height: 200px;
+            max-width: 300px;
+    }
 `;
 
 export const CardButton = styled.button`
@@ -52,6 +54,10 @@ export const CardButton = styled.button`
         background-color: #33a02ff0;
         color: #ffffff;
     }
+            @media (min-width: 320px) and (max-width: 1200px) {
+            font-size: 14px;
+            font-weight: 200;
+    }
 `;
 
 export const CardName = styled.p`
@@ -62,6 +68,10 @@ export const CardName = styled.p`
     font-weight: 500;
     margin: 0px;
     margin-bottom: 15px;
+        @media (min-width: 320px) and (max-width: 1200px) {
+            font-size: 14px;
+            font-weight: 200;
+    }
 `;
 
 export const CardPrice = styled.p`
@@ -72,7 +82,12 @@ export const CardPrice = styled.p`
     font-weight: 500;
     margin: 0px;
     margin-bottom: 15px;
+        @media (min-width: 320px) and (max-width: 1200px) {
+            font-size: 18px;
+            font-weight: 400;
+    }
 `;
+
 export const CardInfo = styled.div`
     display: flex;
     background-color: #2bff003b;

@@ -2,12 +2,10 @@ import styled from '@emotion/styled';
 import wood from "../../images/wood.jpg";
 
 export const Box = styled.div`
-    /* position: fixed; */
     display: flex;
     box-sizing: border-box;
-    /* height: 100vh; */
     min-height:100vh;
-    width: 100%;
+    max-width: 100vw;
     padding-top: 20px;
     margin: 0px;
     flex-direction: row;
@@ -17,4 +15,8 @@ export const Box = styled.div`
     background-size: cover;
     background-position: center ;
     background-attachment: fixed;
+            @media (min-width: 320px) and (max-width: 355px) {
+        background-image: none;
+        background-color: #7188729d;
+    }
 `;
