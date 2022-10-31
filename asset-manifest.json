@@ -1,7 +1,16 @@
 {
   "files": {
-    "main.css": "/delivery-app/static/css/main.add92382.css",
-    "main.js": "/delivery-app/static/js/main.be29edd5.js",
+    "main.css": "/delivery-app/static/css/main.f9f5c8ef.css",
+    "main.js": "/delivery-app/static/js/main.640efcbd.js",
+    "home-page.js": "/delivery-app/static/js/home-page.32dc1f77.chunk.js",
+    "shops-page.js": "/delivery-app/static/js/shops-page.e783cf2c.chunk.js",
+    "cart-page.js": "/delivery-app/static/js/cart-page.29609bfa.chunk.js",
+    "register-page.js": "/delivery-app/static/js/register-page.6b5d7ee7.chunk.js",
+    "login-page.js": "/delivery-app/static/js/login-page.48918ba2.chunk.js",
+    "on-delivery.js": "/delivery-app/static/js/on-delivery.5f2d32f6.chunk.js",
+    "not-found.js": "/delivery-app/static/js/not-found.ebb67cd1.chunk.js",
+    "static/js/345.74360fc5.chunk.js": "/delivery-app/static/js/345.74360fc5.chunk.js",
+    "static/css/928.87466cde.chunk.css": "/delivery-app/static/css/928.87466cde.chunk.css",
     "static/media/homepage.jpg": "/delivery-app/static/media/homepage.dc928e50e377853b77e7.jpg",
     "static/media/concrete-1646788.jpg": "/delivery-app/static/media/concrete-1646788.dde404c431c920d252a8.jpg",
     "static/media/delivery_order.png": "/delivery-app/static/media/delivery_order.13bdc520ac3d97d8fc49.png",
@@ -16,11 +25,20 @@
     "static/media/sushi-gb2b7fadaa_640.jpg": "/delivery-app/static/media/sushi-gb2b7fadaa_640.8fd12e0bb63894a4a29d.jpg",
     "static/media/burger-g176b30e6d_640.jpg": "/delivery-app/static/media/burger-g176b30e6d_640.e402371e84e2f25bb210.jpg",
     "index.html": "/delivery-app/index.html",
-    "main.add92382.css.map": "/delivery-app/static/css/main.add92382.css.map",
-    "main.be29edd5.js.map": "/delivery-app/static/js/main.be29edd5.js.map"
+    "main.f9f5c8ef.css.map": "/delivery-app/static/css/main.f9f5c8ef.css.map",
+    "main.640efcbd.js.map": "/delivery-app/static/js/main.640efcbd.js.map",
+    "home-page.32dc1f77.chunk.js.map": "/delivery-app/static/js/home-page.32dc1f77.chunk.js.map",
+    "shops-page.e783cf2c.chunk.js.map": "/delivery-app/static/js/shops-page.e783cf2c.chunk.js.map",
+    "cart-page.29609bfa.chunk.js.map": "/delivery-app/static/js/cart-page.29609bfa.chunk.js.map",
+    "register-page.6b5d7ee7.chunk.js.map": "/delivery-app/static/js/register-page.6b5d7ee7.chunk.js.map",
+    "login-page.48918ba2.chunk.js.map": "/delivery-app/static/js/login-page.48918ba2.chunk.js.map",
+    "on-delivery.5f2d32f6.chunk.js.map": "/delivery-app/static/js/on-delivery.5f2d32f6.chunk.js.map",
+    "not-found.ebb67cd1.chunk.js.map": "/delivery-app/static/js/not-found.ebb67cd1.chunk.js.map",
+    "345.74360fc5.chunk.js.map": "/delivery-app/static/js/345.74360fc5.chunk.js.map",
+    "928.87466cde.chunk.css.map": "/delivery-app/static/css/928.87466cde.chunk.css.map"
   },
   "entrypoints": [
-    "static/css/main.add92382.css",
-    "static/js/main.be29edd5.js"
+    "static/css/main.f9f5c8ef.css",
+    "static/js/main.640efcbd.js"
   ]
 }
