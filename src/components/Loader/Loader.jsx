@@ -1,14 +1,22 @@
-
-import { Triangle } from 'react-loader-spinner';
+import { Oval } from 'react-loader-spinner';
+import { Box } from "./Loader.styled";
 
 export const Loader = () => {
     return (
-        <Triangle
-            color="#57d331"
-            height={80}
-            width={80}
-            wrapperStyle={{ margin: '0 auto' }}
-        />
+    <Box>
+        <Oval
+        height={80}
+        width={80}
+        color="#44d142"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        ariaLabel='oval-loading'
+        secondaryColor="#4fa94d"
+        strokeWidth={5}
+        strokeWidthSecondary={4}
+        />        
+    </Box>
     )
 };
 

@@ -1,42 +1,57 @@
 import './App.css';
+import { Suspense, lazy } from "react"
 import { Routes, Route } from "react-router-dom";
 import { refs } from "../../services/refs";
 import { infoStyle } from "../../services/userInformator";
 import Layout from "../Layout/Layout";
-import HomePage from "../../pages/HomePage/HomePage";
-import ShopsPage from "../../pages/ShopsPage/ShopsPage";
-import ShoppingCartPage from "../../pages/ShoppingCartPage/ShoppingCartPage";
-import RegisterPage from "../../pages/RegisterPage/RegisterPage";
-import LoginPage from "../../pages/LoginPage/LoginPage";
-import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
-import OnDelivery from "../../pages/OnDelivery/OnDelivery"
+import PublicRoute from "../../pages/PublicRoute/PublicRoute";
+// import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute"
+import { Loader } from "../Loader/Loader"
 infoStyle();
 
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage" /* webpackChunkName: "home-page" */));
+const ShopsPage = lazy(() => import("../../pages/ShopsPage/ShopsPage" /* webpackChunkName: "shops-page" */));
+const ShoppingCartPage = lazy(() => import("../../pages/ShoppingCartPage/ShoppingCartPage" /* webpackChunkName: "cart-page" */));
+const RegisterPage = lazy(() => import("../../pages/RegisterPage/RegisterPage" /* webpackChunkName: "register-page" */));
+const LoginPage = lazy(() => import("../../pages/LoginPage/LoginPage"/* webpackChunkName: "login-page" */));
+const OnDelivery = lazy(() => import("../../pages/OnDelivery/OnDelivery" /* webpackChunkName: "on-delivery" */));
+const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage" /* webpackChunkName: "not-found" */));
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path={refs.layout} element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path={refs.shopsPage} element={<ShopsPage />} />
-          <Route path={refs.shoppingCartPage} element={<ShoppingCartPage />} />
+      <Suspense fallback={<Loader />}>
+
+          <Routes>
+
+          <Route path={refs.layout} element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path={refs.shopsPage} element={<ShopsPage />} />
+            <Route path={refs.shoppingCartPage} element={<ShoppingCartPage />} />
+            <Route path={refs.notFoundPage} element={<NotFoundPage />} />
+            <Route path={refs.onDelivery} element={<OnDelivery/>}/> 
+          </Route>
+
           <Route
-            path={refs.registerPage}
-            element={
-              <RegisterPage />
-            }
-          />
-          <Route
-            path={refs.loginPage}
-              element={      
-                  <LoginPage />
+              path={refs.registerPage}
+              element={
+                  <PublicRoute>
+                    <RegisterPage />
+                  </PublicRoute>
               }
           />
-          <Route path={refs.notFoundPage} element={<NotFoundPage />} />
-          <Route path={refs.onDelivery} element={<OnDelivery/>}/> 
-        </Route>
-      </Routes>
+          
+          <Route
+              path={refs.loginPage}
+              element={
+                  <PublicRoute>
+                    <LoginPage />
+                  </PublicRoute>
+                }
+          />
+
+        </Routes>
+      </Suspense>
     </>
   )
 }
