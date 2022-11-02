@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-// import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 // import FlutterDashIcon from '@mui/icons-material/FlutterDash';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -46,7 +45,6 @@ export const Header = styled.header`
     background-color: #33a02ff0;
     border-bottom: 1px solid #0a415a;
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
-    /* display: flex; */
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
