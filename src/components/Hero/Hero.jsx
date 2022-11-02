@@ -1,13 +1,14 @@
-import { Hero } from "./Hero.styled";
-import { Link } from "react-router-dom";
+import { Box, Hero, ShopsLink } from "./Hero.styled";
 
 export default function HeroSection(){
     return (
-            <Hero>Place an order and get it delivered to your home. We all know that the best restaurant is at home.
-                <Link to="/shops"
-                    style={{ textDecoration: "none", fontSize: 18, color: "#2fa08dc3" }}>
-                    Go to your favorite dishes...
-                </Link>
-            </Hero>
+        <Box>
+            <Hero>Place an order and get it delivered to your home. We all know that the best restaurant is at home.</Hero>
+            <ShopsLink to="/shops">
+                Go to your favorite dishes...
+            </ShopsLink>
+        </Box>
+
+        
     )
 }

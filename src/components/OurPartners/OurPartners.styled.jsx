@@ -29,6 +29,13 @@ export const Wrapper = styled.div`
     display: block;
     border-radius: 5px;
     margin: 0px auto;
+    background-color: #808080bc;
+    box-shadow: 18px 13px 58px 0px rgba(58,199,95,0.82);
+    &:hover,
+    &:focus {
+            box-shadow: 18px 13px 58px 0px #9f3ac7d1;
+            transform: scale(102%);
+        }
 `   
 
 export const ShopName = styled.p`
@@ -52,7 +59,7 @@ export const Item = styled.li`
 export const MeatAvatar = styled(KebabDiningIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -62,7 +69,7 @@ export const MeatAvatar = styled(KebabDiningIcon)`
 export const JapanAvatar = styled(SetMealIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -72,7 +79,7 @@ export const JapanAvatar = styled(SetMealIcon)`
 export const SaladderAvatar = styled(DinnerDiningIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -82,7 +89,7 @@ export const SaladderAvatar = styled(DinnerDiningIcon)`
 export const BurgerAvatar = styled(FastfoodIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -92,7 +99,7 @@ export const BurgerAvatar = styled(FastfoodIcon)`
 export const BakeryAvatar = styled(BakeryDiningIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -102,7 +109,7 @@ export const BakeryAvatar = styled(BakeryDiningIcon)`
 export const PizzaAvatar = styled(LocalPizzaIcon)`
     display: block;
     align-items: center;
-    fill: #33a02ff0;
+    fill: #0c7a08ee;
     width: 40px;
     height: 40px;
     margin-left: auto;

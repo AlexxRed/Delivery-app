@@ -42,4 +42,5 @@ export const Hero = styled.h3`
 export const TitleName = styled.h2`
     display: block;
     text-align: center;
+    margin-top: 150px;
 `
