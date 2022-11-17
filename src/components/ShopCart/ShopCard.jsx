@@ -26,6 +26,8 @@ export default function ShopsCart() {
         if (order.find(item => item.name === name)) {
             Notify.info(`You have already added ${name} to your order`)
             return
+        } else {
+            Notify.info(`${name} added to cart`)
         }
         dispatch(setOrder({name, price, image, quantity:1}))
     },[dispatch, order])

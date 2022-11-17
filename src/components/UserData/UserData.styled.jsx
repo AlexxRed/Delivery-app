@@ -6,7 +6,7 @@ export const Box = styled.div`
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 0px;
     max-width: 480px;
     min-height: 780px;
     background-color: #03c03c;

@@ -8,7 +8,8 @@ import {
     ButtonDelete,
     ButtonAdd,
     ButtonDecrease,
-    Wrapper
+    Wrapper,
+    ShopsLink
 } from './OrderList.styled';
 import { getOrder, removeOrder, increaseQuantity, decreaseQuantity} from '../../redux/orderSlice';
 
@@ -24,8 +25,7 @@ export default function OrderList() {
     return (
         <>
             <List>
-                {/* {isLoading && <Loader/>} */}
-                {availableOrdes.length === 0 && <h3>Choose what you want to order.</h3>}  
+                {availableOrdes.length === 0 && <ShopsLink to="/shops">Choose what you want to order - here</ShopsLink>}  
                 {availableOrdes.length !== 0 && <OrderText>Your order:</OrderText>}
                 {availableOrdes.length !== 0 && availableOrdes.map((item) => (
                         <ListItem key={item.name} >                  

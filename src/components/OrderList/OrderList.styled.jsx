@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
     display: flex;
@@ -13,7 +14,6 @@ export const List = styled.ul`
     padding-left: 0px;
     border-radius: 5px;
     margin-left: 30px;
-    /* margin-right: auto; */
     margin-top:80px;
     background-color: #808080d5;
         @media (max-width: 420px) {
@@ -101,4 +101,18 @@ export const Wrapper = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
+`;
+
+export const ShopsLink = styled(Link)`
+    display: block;
+    padding-top: 10px;
+    margin: 0px;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 18px;
+    color: #2fa08dc3;
+    &:hover,
+    &:focus {
+            color: green;
+        }
 `;

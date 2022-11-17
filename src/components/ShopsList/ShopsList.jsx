@@ -4,7 +4,6 @@ import { List, ListItem, ShopAvatar, ShopBox, ShopName, ListButton } from './Sho
 import { useSelector, useDispatch } from 'react-redux';
 import { getShops, setShop } from '../../redux/shopsSlice';
 import { fetchAllShops } from '../../redux/shopsOperations';
-import { Loader } from '../Loader/Loader';
 
 
 export default function ShopsList() {
@@ -17,7 +16,6 @@ export default function ShopsList() {
 
     return (
         <List>
-            {availableShops.length === 0 && <Loader/> }  
             {availableShops.map((item) => (
                 <ListButton key={item._id}>
                     <ListItem onClick={() => dispatch(setShop(item.shop))}>                    

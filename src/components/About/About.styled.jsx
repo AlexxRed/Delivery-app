@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    padding: 15px;
     height: 700px;
     font-size: 40px;
     font-weight: 900;
@@ -23,7 +24,7 @@ export const Wrapper = styled.div`
     background-size: cover;
     background-position: bottom ;
     width: 100%;
-    color: #33a02f86;
+    color: #32d12fc7;
     @media screen and (min-width: 320px) {
         font-size: 20px;
         font-weight: 400;

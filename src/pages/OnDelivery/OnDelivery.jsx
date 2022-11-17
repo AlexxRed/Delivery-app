@@ -7,7 +7,10 @@ export default function OnDelivery() {
     Notify.info('Your order is on its way to you!');
     return (
         <Box>
-            <Text>Your order is on its way to you! :) <Link to={`/${refs.shopsPage}`}>Click here to place another order</Link></Text>
+            <Text>
+                Your order is on its way to you! :)
+                <Link to={`/${refs.shopsPage}`}>Click here to place another order</Link>
+            </Text>
         </Box>
     )
 };
