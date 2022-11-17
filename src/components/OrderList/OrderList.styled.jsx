@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import { Link } from "react-router-dom";
 
 export const List = styled.ul`
@@ -75,18 +75,18 @@ export const ButtonDelete = styled(DeleteForeverIcon)`
         background-color: #bb4d1a;
     }
 `;
-export const ButtonAdd = styled(AddCircleOutlineIcon)`
+export const ButtonAdd = styled(AddIcon)`
     cursor: pointer;
     border-radius: 3px;
     padding: 5px 5px;
-    color: #5e5b5b;
+    color: #141414;
     font-weight: 500;
     &:hover,
     &:focus {
         fill:green;
     }
 `;
-export const ButtonDecrease = styled(RemoveCircleOutlineIcon)`
+export const ButtonDecrease = styled(RemoveIcon)`
     cursor: pointer;
     border-radius: 3px;
     padding: 5px 5px;
