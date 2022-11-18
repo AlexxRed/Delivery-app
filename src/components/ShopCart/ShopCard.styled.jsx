@@ -14,10 +14,11 @@ export const List = styled.ul`
     background-color: #8080809d;
     list-style: none;
     @media (min-width: 320px) and (max-width: 1200px) {
-        margin-top: 525px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-left: -55px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+        margin-left: -15px;
     }
 `;
 

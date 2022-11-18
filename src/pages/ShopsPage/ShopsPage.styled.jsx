@@ -15,8 +15,11 @@ export const Box = styled.div`
     background-size: cover;
     background-position: center ;
     background-attachment: fixed;
-            @media (min-width: 320px) and (max-width: 355px) {
-        background-image: none;
-        background-color: #7188729d;
-    }
+        @media (min-width: 320px) and (max-width: 355px) {
+            background-image: none;
+            background-color: #7188729d;
+        }
+        @media (min-width: 320px) and (max-width: 1200px) {
+            display: block;
+        }
 `;
