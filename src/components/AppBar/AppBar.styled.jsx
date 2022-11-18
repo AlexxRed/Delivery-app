@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-// import FlutterDashIcon from '@mui/icons-material/FlutterDash';
-import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import FlutterDashIcon from '@mui/icons-material/FlutterDash';
+// import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-export const Logo = styled(LoyaltyIcon)`
+export const Logo = styled(FlutterDashIcon)`
     display: block;
     text-align: center;
     padding: 6px;
