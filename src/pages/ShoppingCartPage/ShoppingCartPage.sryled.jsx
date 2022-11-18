@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-// import food from "../../images/prepare.jpg";
 import food from "../../images/main/homepage.jpg"
 
 export const Box = styled.div`
