@@ -98,3 +98,13 @@ export const BasketText = styled.p`
 export const Wrapper = styled.div`
     position: relative;
 `;
+
+export const Text = styled.h4`
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+    color: #0a415a;
+    @media (min-width: 320px) and (max-width: 670px) {
+        display: none;
+    }
+`

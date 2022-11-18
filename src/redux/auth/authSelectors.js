@@ -1,9 +1,13 @@
 const getIsLoggedIn = state => state.auth.isLoggedIn;
 
-const getUsername = state => state.auth.user.name;
+const getUserName = state => state.auth.name;
+const getUserEmail = state => state.auth.email;
+const getUserPhone = state => state.auth.phone;
 
 const authSelectors = {
     getIsLoggedIn,
-    getUsername,
+    getUserName,
+    getUserEmail,
+    getUserPhone
 };
 export default authSelectors;

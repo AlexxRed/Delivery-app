@@ -5,7 +5,7 @@ import { refs } from "../../services/refs";
 import { infoStyle } from "../../services/userInformator";
 import Layout from "../Layout/Layout";
 import PublicRoute from "../../pages/PublicRoute/PublicRoute";
-// import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute"
+import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute"
 import { Loader } from "../Loader/Loader"
 infoStyle();
 
@@ -25,11 +25,27 @@ function App() {
           <Routes>
 
           <Route path={refs.layout} element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path={refs.shopsPage} element={<ShopsPage />} />
-            <Route path={refs.shoppingCartPage} element={<ShoppingCartPage />} />
+            <Route index element={
+              <PrivateRoute>
+                <HomePage />
+              </PrivateRoute>
+            } />
+            <Route path={refs.shopsPage} element={
+              <PrivateRoute>
+                <ShopsPage />
+              </PrivateRoute>
+            } />
+            <Route path={refs.shoppingCartPage} element={
+              <PrivateRoute>
+                <ShoppingCartPage />
+              </PrivateRoute>
+            } />
             <Route path={refs.notFoundPage} element={<NotFoundPage />} />
-            <Route path={refs.onDelivery} element={<OnDelivery/>}/> 
+            <Route path={refs.onDelivery} element={
+              <PrivateRoute>
+                <OnDelivery />
+              </PrivateRoute>
+            } /> 
           </Route>
 
           <Route

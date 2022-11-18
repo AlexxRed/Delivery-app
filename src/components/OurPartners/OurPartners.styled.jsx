@@ -10,7 +10,8 @@ export const List = styled.ul`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     margin-left: 15px;
     margin-right: 15px;
     margin-top:50px;

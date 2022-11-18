@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import PaymentForm from "../../components/Payment/Payment";
 import { refs } from '../../services/refs';
+import authSelectors from '../../redux/auth/authSelectors'
 
 
 
@@ -16,6 +17,9 @@ export default function RegisterPage() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const availableOrdes = useSelector(getOrder);
+    const name = useSelector(authSelectors.getUserName);
+    const email = useSelector(authSelectors.getUserEmail);
+    const phone = useSelector(authSelectors.getUserPhone);
 
 
 
@@ -25,9 +29,9 @@ export default function RegisterPage() {
 
 
     const initialValues = {
-        name: '',
-        email: '',
-        phone: '',
+        name,
+        email,
+        phone,
         address: '',
     };
 

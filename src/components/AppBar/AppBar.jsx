@@ -1,14 +1,13 @@
-import { Link, Header, Navigation, Box, Logo, Basket, BasketText, Wrapper} from './AppBar.styled';//Logo,LogoIcon 
+import { Link, Header, Navigation, Box, Logo, Basket, BasketText, Wrapper, Text} from './AppBar.styled';//Logo,LogoIcon 
 import { NavLink } from 'react-router-dom';
 import { refs } from '../../services/refs';
 import { useSelector } from 'react-redux';
 import {getOrder}from '../../redux/orderSlice'
-// import authSelectors from '../../redux/auth/authSelectors'
+import authSelectors from '../../redux/auth/authSelectors'
 
 
 export function AppBar() {
-    // const isLoggedIn = useSelector(authSelectors.getIsLoggedIn)
-    const isLoggedIn = true;
+    const userName = useSelector(authSelectors.getUserName)
     const order = useSelector(getOrder)
 
     return (
@@ -25,7 +24,14 @@ export function AppBar() {
                     </Wrapper>
                     </NavLink>
                 </Box>
-                {isLoggedIn ?
+                <Text>{userName}</Text>
+            </Navigation>
+        </Header>
+        
+    )
+};
+
+                /* {isLoggedIn ?
                     <Box>
                 </Box>
                         :
@@ -34,10 +40,4 @@ export function AppBar() {
                     <Link to={refs.registerPage}>Registration</Link>
                 </Box>
                     
-                }
-                
-            </Navigation>
-        </Header>
-        
-    )
-};
+                } */
