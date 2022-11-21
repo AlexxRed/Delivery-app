@@ -7,6 +7,7 @@ export const LoadingText = styled.p`
     transform: translate(-50%, -50%);
     color: #5f0909;
     height: 20px;
+    z-index: 1000;
 `
 
 export const Box = styled.div`

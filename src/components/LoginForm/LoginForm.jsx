@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { LableForm, Box, LogForm, FormTitle, InputForm, FormButton, Text } from "./LoginForm.styled";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import  validationSchemaLogin  from "../../services/schemaValidationLogin";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import  operations  from '../../redux/auth/authOperations';
+import  authSelectors  from '../../redux/auth/authSelectors';
+import { Loader } from '../Loader/Loader';
 
 
 
 export default function LoginForm() {
     const dispatch = useDispatch();
+    const isLoading = useSelector(authSelectors.getIsLoading);
 
 
     const initialValues = {
@@ -28,43 +31,49 @@ export default function LoginForm() {
 
     return (
         <Box>
+            {isLoading && <Loader/>}
+            {!isLoading && 
+            <>
             <FormTitle>Please enter your name and password</FormTitle>
 
-            <Formik
-            initialValues={initialValues}
-            onSubmit={handleSubmit}
-            validationSchema={validationSchemaLogin}
-            >
-            <LogForm autoComplete="off">
-                    <LableForm htmlFor="email">
-                        Email
-                    <InputForm
-                            name="email"
-                            type="email"
-                            placeholder="Your email" />
-                </LableForm>
-                    <ErrorMessage name="name" render={renderError} />
-                    <LableForm htmlFor="password">
-                        Password
+                <Formik
+                initialValues={initialValues}
+                onSubmit={handleSubmit}
+                validationSchema={validationSchemaLogin}
+                >
+                <LogForm autoComplete="off">
+                        <LableForm htmlFor="email">
+                            Email
                         <InputForm
-                            aria-invalid="false"
-                            name="password"
-                            type="password"
-                            placeholder="Password" />
-                </LableForm>
-                    <ErrorMessage name="password" render={renderError} />
-                        
-                <FormButton type="submit">Login</FormButton>
-            </LogForm>
-            </Formik>
-                
-            <Text>Don`t have an account?</Text>
-            <Text>
-                <Link to="/register"
-                    style={{ textDecoration: "none", fontSize: 18, color: "#b027da" }}>
-                    Register
-                </Link>
-            </Text>
+                                name="email"
+                                type="email"
+                                placeholder="Your email" />
+                    </LableForm>
+                        <ErrorMessage name="name" render={renderError} />
+                        <LableForm htmlFor="password">
+                            Password
+                            <InputForm
+                                aria-invalid="false"
+                                name="password"
+                                type="password"
+                                placeholder="Password" />
+                    </LableForm>
+                        <ErrorMessage name="password" render={renderError} />
+                            
+                    <FormButton type="submit">Login</FormButton>
+                </LogForm>
+                </Formik>
+                    
+                <Text>Don`t have an account?</Text>
+                <Text>
+                    <Link to="/register"
+                        style={{ textDecoration: "none", fontSize: 18, color: "#b027da" }}>
+                        Register
+                    </Link>
+                </Text>
+            </>
+            }
+            
         </Box>
     );
 };

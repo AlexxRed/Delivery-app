@@ -39,6 +39,9 @@ const initialState = {
             state.isLoggedIn = true;
             state.isLoading = false;
         },
+        [operations.logIn.rejected](state, action) {
+            state.isLoading = false;
+        },
         [operations.logOut.fulfilled](state, action) {
             state.user = { name: null, email: null, phone: null };
             state.token = null;

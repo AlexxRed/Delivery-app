@@ -5,12 +5,16 @@ import validationSchemaRegister from '../../services/validationSchemaRegister';
 import { Link } from "react-router-dom";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import  operations  from '../../redux/auth/authOperations';
+import  authSelectors  from '../../redux/auth/authSelectors';
+import { Loader } from '../Loader/Loader';
 
 
 
 export default function RegisterPage() {
     const dispatch = useDispatch();
+    const isLoading = useSelector(authSelectors.getIsLoading);
 
 
     const initialValues = {
@@ -32,6 +36,9 @@ export default function RegisterPage() {
 
     return (
         <Box>
+            {isLoading && <Loader/>}
+            {!isLoading && 
+            <>
             <FormTitle>Please register to use the Delivery service</FormTitle>
             
             <Formik
@@ -99,6 +106,9 @@ export default function RegisterPage() {
                     style={{ textDecoration: "none", fontSize: 18, color: "#b027da" }}>Login
                 </Link>
             </Text>
+            </>
+            }
+
         </Box>
     );
 };
