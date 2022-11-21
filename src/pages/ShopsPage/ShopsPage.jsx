@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Box } from './ShopsPage.styled';
 import ShopsList from '../../components/ShopsList/ShopsList';
-import ShopCart from '../../components/ShopCart/ShopCard'
+import ShopItems from '../../components/ShopItems/ShopItems'
 import Footer from '../../components/Footer/Footer';
 import { getShops } from '../../redux/shopsSlice';
 import { Loader } from '../../components/Loader/Loader';
@@ -14,7 +14,7 @@ function ShopsPage() {
             <Box>
                 {availableShops.length === 0 ?? <Loader/> }  
                 <ShopsList />
-                <ShopCart />
+                <ShopItems />
             </Box>
             <Footer/>
         </>       

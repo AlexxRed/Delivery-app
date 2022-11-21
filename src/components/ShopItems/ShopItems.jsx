@@ -4,11 +4,11 @@ import { getShops } from '../../redux/shopsSlice';
 import { getOrder, setOrder } from '../../redux/orderSlice';
 import { fetchAllShops } from '../../redux/shopsOperations';
 import { getActiveShop } from '../../redux/shopsSlice';
-import { List, ListItem, CardPhoto, CardName, CardButton, CardPrice, CardInfo } from './ShopCard.styled';
+import { List, ListItem, CardPhoto, CardName, CardButton, CardPrice, CardInfo } from './ShopItems.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 
-export default function ShopsCart() {
+export default function ShopItems() {
     const dispatch = useDispatch();
     const availableShops = useSelector(getShops);
     const activeShop = useSelector(getActiveShop);
