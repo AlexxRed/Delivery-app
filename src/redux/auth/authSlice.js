@@ -28,12 +28,16 @@ const initialState = {
         [operations.register.rejected](state, action) {
             state.isLoading = false;
         },
+        [operations.logIn.pending](state, action) {
+            state.isLoading = true;
+        },
         [operations.logIn.fulfilled](state, action) {
             state.name = action.payload.name;
             state.email = action.payload.email;
             state.phone = action.payload.phone;
             state.token = action.payload.token;
             state.isLoggedIn = true;
+            state.isLoading = false;
         },
         [operations.logOut.fulfilled](state, action) {
             state.user = { name: null, email: null, phone: null };
