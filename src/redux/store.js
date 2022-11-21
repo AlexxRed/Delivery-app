@@ -2,7 +2,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import { shopsSliceReducer } from './shopsSlice';
 import { orderSliceReducer } from './orderSlice';
 import authSliceReducer from './auth/authSlice'
-// import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 import {
     persistStore,
@@ -34,7 +33,7 @@ export const store = configureStore({
                 ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
             },
         }
-    ),]//logger
+    ),]
 });
 
 export const persistor = persistStore(store);
