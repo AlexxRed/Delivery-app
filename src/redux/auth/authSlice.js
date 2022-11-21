@@ -43,7 +43,10 @@ const initialState = {
             state.isLoading = false;
         },
         [operations.logOut.fulfilled](state, action) {
-            state.user = { name: null, email: null, phone: null };
+            state.name = null;
+            state.email = null;
+            state.phone = null;
+            state.token = null;
             state.token = null;
             state.isLoggedIn = false;
         },
