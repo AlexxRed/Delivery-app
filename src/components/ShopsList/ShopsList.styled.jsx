@@ -12,7 +12,7 @@ export const List = styled.ul`
     height: fit-content;
     padding-left: 0px;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top:60px;
     background-color: #8080809d;
         @media (min-width: 320px) and (max-width: 1200px) {

@@ -8,7 +8,7 @@ export const List = styled.ul`
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-right: 15px;
     margin-top:150px;
     background-color: #8080809d;

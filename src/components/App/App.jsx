@@ -7,6 +7,7 @@ import Layout from "../Layout/Layout";
 import PublicRoute from "../../pages/PublicRoute/PublicRoute";
 import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute"
 import { Loader } from "../Loader/Loader"
+// import { useEffect } from 'react';
 infoStyle();
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage" /* webpackChunkName: "home-page" */));
@@ -18,6 +19,7 @@ const OnDelivery = lazy(() => import("../../pages/OnDelivery/OnDelivery" /* webp
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage" /* webpackChunkName: "not-found" */));
 
 function App() {
+
   return (
     <>
       <Suspense fallback={<Loader />}>

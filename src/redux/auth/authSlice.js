@@ -7,18 +7,26 @@ const initialState = {
     phone: null,
     token: null,
     isLoggedIn: false,
+    isLoading: false,
     };
 
     const authSlice = createSlice({
     name: 'auth',
     initialState,
     extraReducers: {
+        [operations.register.pending](state, action) {
+            state.isLoading = true;
+        },
         [operations.register.fulfilled](state, action) {
             state.name = action.payload.name;
             state.email = action.payload.email;
             state.phone = action.payload.phone;
             state.token = action.payload.token;
             state.isLoggedIn = true;
+            state.isLoading = false;
+        },
+        [operations.register.rejected](state, action) {
+            state.isLoading = false;
         },
         [operations.logIn.fulfilled](state, action) {
             state.name = action.payload.name;
