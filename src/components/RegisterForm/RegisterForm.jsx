@@ -1,20 +1,18 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import { LableForm, Box, RegisterForm, FormTitle, InputForm, FormButton, Text } from "./RegisterForm.styled";
 import { Formik, ErrorMessage } from 'formik';
 import validationSchemaRegister from '../../services/validationSchemaRegister';
 import { Link } from "react-router-dom";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
 import  operations  from '../../redux/auth/authOperations';
-import  authSelectors  from '../../redux/auth/authSelectors';
 import { Loader } from '../Loader/Loader';
 
 
 
 export default function RegisterPage() {
     const dispatch = useDispatch();
-    const isLoading = useSelector(authSelectors.getIsLoading);
+    const [loading, setLoading] = useState(false)
 
 
     const initialValues = {
@@ -29,6 +27,7 @@ export default function RegisterPage() {
     const handleSubmit = (values, { resetForm }) => {
         console.log(values);
         dispatch(operations.register(values));
+        setLoading(true);
         resetForm();
     };
 
@@ -36,8 +35,8 @@ export default function RegisterPage() {
 
     return (
         <Box>
-            {isLoading && <Loader/>}
-            {!isLoading && 
+            {loading && <Loader/>}
+            {!loading && 
             <>
             <FormTitle>Please register to use the Delivery service</FormTitle>
             

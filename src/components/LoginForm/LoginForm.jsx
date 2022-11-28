@@ -1,18 +1,18 @@
+import { useState } from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import { Link } from "react-router-dom";
 import { LableForm, Box, LogForm, FormTitle, InputForm, FormButton, Text } from "./LoginForm.styled";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import  validationSchemaLogin  from "../../services/schemaValidationLogin";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import  operations  from '../../redux/auth/authOperations';
-import  authSelectors  from '../../redux/auth/authSelectors';
 import { Loader } from '../Loader/Loader';
 
 
 
 export default function LoginForm() {
     const dispatch = useDispatch();
-    const isLoading = useSelector(authSelectors.getIsLoading);
+    const [loading, setLoading] = useState(false)
 
 
     const initialValues = {
@@ -23,6 +23,7 @@ export default function LoginForm() {
     const handleSubmit = (values, { resetForm }) => {
         console.log(values);
         dispatch(operations.logIn(values));
+        setLoading(true);
         resetForm();
     };
 
@@ -31,8 +32,8 @@ export default function LoginForm() {
 
     return (
         <Box>
-            {isLoading && <Loader/>}
-            {!isLoading && 
+            {loading && <Loader/>}
+            {!loading && 
             <>
             <FormTitle>Please enter your name and password</FormTitle>
 
