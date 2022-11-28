@@ -1,3 +1,4 @@
 Adaptive small food delivery service.
-Front-end + Back-end
-https://alexxred.github.io/delivery-app/
+FrontEnd - https://alexxred.github.io/delivery-app/
+BackEnd - https://github.com/AlexxRed/delivery-app-backend
+
