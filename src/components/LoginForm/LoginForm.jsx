@@ -32,7 +32,11 @@ export default function LoginForm() {
 
     return (
         <Box>
-            {loading && <Loader/>}
+            {loading && 
+            <>
+                <h3>Please wait</h3>
+                <Loader/>
+            </>}
             {!loading && 
             <>
             <FormTitle>Please enter your name and password</FormTitle>

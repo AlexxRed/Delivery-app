@@ -4,7 +4,6 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 export const List = styled.ul`
     display: flex;
-    position: fixed;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;

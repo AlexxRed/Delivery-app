@@ -8,9 +8,9 @@ export const List = styled.ul`
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-right: 15px;
-    margin-top:150px;
+    margin-top:60px;
     background-color: #8080809d;
     list-style: none;
     @media (min-width: 320px) and (max-width: 1200px) {
@@ -18,7 +18,7 @@ export const List = styled.ul`
         margin-left: auto;
         margin-right: auto;
         padding: 0px;
-        margin-left: -15px;
+        margin-left: 5px;
     }
 `;
 

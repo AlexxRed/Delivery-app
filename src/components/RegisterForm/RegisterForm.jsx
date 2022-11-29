@@ -35,7 +35,11 @@ export default function RegisterPage() {
 
     return (
         <Box>
-            {loading && <Loader/>}
+            {loading && 
+            <>
+                <h3>Please wait</h3>
+                <Loader/>
+            </>}
             {!loading && 
             <>
             <FormTitle>Please register to use the Delivery service</FormTitle>

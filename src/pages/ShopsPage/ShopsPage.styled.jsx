@@ -19,7 +19,7 @@ export const Box = styled.div`
             background-image: none;
             background-color: #7188729d;
         }
-        @media (min-width: 320px) and (max-width: 1200px) {
+        @media (min-width: 320px) and (max-width: 780px) {
             display: block;
         }
 `;
