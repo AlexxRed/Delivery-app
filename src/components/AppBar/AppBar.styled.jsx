@@ -1,16 +1,15 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import FlutterDashIcon from '@mui/icons-material/FlutterDash';
-// import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { GiKnifeFork } from 'react-icons/gi'
 
-export const Logo = styled(FlutterDashIcon)`
+export const Logo = styled(GiKnifeFork)`
     display: block;
     text-align: center;
     padding: 6px;
     overflow: hidden;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     fill: #0e4e05;
     &:hover,
     &:focus {
