@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-axios.defaults.baseURL = 'https://delivery-backend-project.herokuapp.com/api';
+axios.defaults.baseURL = 'https://delivery-back.onrender.com/api';
 
 const token = {
     set(token) {
