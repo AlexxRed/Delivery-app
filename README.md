@@ -2,7 +2,9 @@
 
 Own design.
 
-#FrontEnd - https://alexxred.github.io/delivery-app/
+#Live page - https://alexxred.github.io/delivery-app/
+
+#FrontEnd - https://github.com/AlexxRed/delivery-app
 
 #BackEnd - https://github.com/AlexxRed/delivery-app-backend
 
