@@ -7,4 +7,3 @@ Own design.
 #FrontEnd - https://github.com/AlexxRed/delivery-app
 
 #BackEnd - https://github.com/AlexxRed/delivery-app-backend
-
